@@ -5,13 +5,13 @@
 # Copyright 2014, Joe Richards
 #
 
-package 'nodejs-forever-agent'
-package 'coffee-script'
+#package 'nodejs-forever-agent'
+#package 'coffee-script'
 
-nodejs_npm 'grunt-contrib-watch'
+#nodejs_npm 'grunt-contrib-watch'
 nodejs_npm 'pm2'
-nodejs_npm 'nodemon'
+#nodejs_npm 'nodemon'
 
-execute 'pm2 startup centos' do
+execute 'pm2 startup ubuntu' do
     not_if { ::File.exists?('/etc/init.d/pm2-init.sh') }
 end
